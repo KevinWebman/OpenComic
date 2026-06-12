@@ -22,6 +22,7 @@
 			"lastOpened": "Mở gần nhất",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "Thư mục trước",
 			"compressedFirst": "",
 			"invert": "Đảo bộ lọc"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "",
-			"requireAllLabels": ""
+			"requireAllLabels": "",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "",

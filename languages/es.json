@@ -22,6 +22,7 @@
 			"lastOpened": "Última apertura",
 			"lastModified": "Última modificación",
 			"shuffle": "Mezclar",
+			"metadata": "",
 			"foldersFirst": "Carpetas primero",
 			"compressedFirst": "Comprimidos primero",
 			"invert": "Invertir"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "Solo de las carpetas raíz",
-			"requireAllLabels": "Requerir todas las etiquetas seleccionadas"
+			"requireAllLabels": "Requerir todas las etiquetas seleccionadas",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "Deshacer",

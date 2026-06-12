@@ -37,6 +37,7 @@
 		<div class="material-icon button button2 button-random hover-text" hover-text="{{language.global.pickAtRandom}}" onclick="dom.pickAtRandom();">shuffle</div>
 		<div class="bar-buttons-separator"></div>
 		<div class="material-icon button button1 button-labels hover-text{{#if page.filter.hasLabels}} fill{{/if}}" hover-text="{{language.global.labels}}" onclick="dom.labels.loadLabels(); events.activeMenu('#index-labels', '.bar-right-buttons .button-labels', 'right');">label</div>
+		<div class="material-icon button button2 button-filter-metadata hover-text{{#if page.filter.hasMetadata}} fill{{/if}}" hover-text="{{language.global.filter.metadata}}" onclick="dom.metadata.loadFilter(); events.activeMenu('#index-filter-metadata', '.bar-right-buttons .button-filter-metadata', 'right');">filter_alt</div>
 		<div class="material-icon button button2 button-favorite hover-text{{#if page.favorites}} disable-pointer{{/if}}{{#if page.filter.favorites}} fill{{/if}}" hover-text="{{language.global.contextMenu.favorite}}" onclick="dom.labels.filterFavorite();">favorite</div>
 		{{#if page.labelOrFavorites}}
 		<div class="material-icon button button2 button-only-root hover-text{{#if page.filter.onlyRoot}} fill{{/if}}" hover-text="{{language.global.filter.onlyRoot}}" onclick="dom.labels.filterOnlyRoot();">drive_folder_upload</div>

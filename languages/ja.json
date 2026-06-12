@@ -22,6 +22,7 @@
 			"lastOpened": "最近開いた順",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "フォルダーを先に表示",
 			"compressedFirst": "",
 			"invert": "並びを反転"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "",
-			"requireAllLabels": ""
+			"requireAllLabels": "",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "元に戻す",

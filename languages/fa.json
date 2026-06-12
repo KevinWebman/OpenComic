@@ -22,6 +22,7 @@
 			"lastOpened": "آخرین بازشده",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "اول پوشه‌ها",
 			"compressedFirst": "اول فایل‌های فشرده",
 			"invert": "برعکس"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "فقط از پوشه‌های ریشه",
-			"requireAllLabels": "الزام همه برچسب‌های انتخاب‌شده"
+			"requireAllLabels": "الزام همه برچسب‌های انتخاب‌شده",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "برگشت (Undo)",

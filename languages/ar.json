@@ -22,6 +22,7 @@
 			"lastOpened": "المفتوح مؤخراً",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "المجلدات أولاً",
 			"compressedFirst": "",
 			"invert": "عكس الترتيب"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "",
-			"requireAllLabels": ""
+			"requireAllLabels": "",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "تراجع",

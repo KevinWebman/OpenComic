@@ -22,6 +22,7 @@
 			"lastOpened": "Última obertura",
 			"lastModified": "Última modificació",
 			"shuffle": "Barrejar",
+			"metadata": "",
 			"foldersFirst": "Carpetes primer",
 			"compressedFirst": "Comprimits primer",
 			"invert": "Invertir"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "Només des de les carpetes arrel",
-			"requireAllLabels": "Requerir totes les etiquetes seleccionades"
+			"requireAllLabels": "Requerir totes les etiquetes seleccionades",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "Desfer",

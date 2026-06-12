@@ -22,6 +22,7 @@
 			"lastOpened": "Нещодавно відкриті",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "Спочатку каталоги",
 			"compressedFirst": "Спочатку архіви",
 			"invert": "Зворотній порядок"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "Тільки з кореневих каталогів",
-			"requireAllLabels": "Вимагати всі обрані мітки"
+			"requireAllLabels": "Вимагати всі обрані мітки",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "Скасувати",

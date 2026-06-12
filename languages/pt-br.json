@@ -22,6 +22,7 @@
 			"lastOpened": "Último aberto",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "Pastas primeiro",
 			"compressedFirst": "",
 			"invert": "Inverter"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "",
-			"requireAllLabels": ""
+			"requireAllLabels": "",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "Desfazer",

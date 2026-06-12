@@ -22,6 +22,7 @@
 			"lastOpened": "Senast öppnad",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "Mappar först",
 			"compressedFirst": "",
 			"invert": "Invertera"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "",
-			"requireAllLabels": ""
+			"requireAllLabels": "",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "",

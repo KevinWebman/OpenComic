@@ -22,6 +22,7 @@
 			"lastOpened": "Dernière ouverture",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "Dossiers en premier",
 			"compressedFirst": "Compressés en premier",
 			"invert": "Inverser"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "Uniquement depuis les dossiers racine",
-			"requireAllLabels": "Exiger toutes les étiquettes sélectionnées"
+			"requireAllLabels": "Exiger toutes les étiquettes sélectionnées",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "Annuler",

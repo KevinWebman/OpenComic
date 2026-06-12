@@ -8,6 +8,7 @@ const domPoster = require(p.join(appDir, '.dist/dom/poster.js')),
 	boxes = require(p.join(appDir, '.dist/dom/boxes.js')),
 	history = require(p.join(appDir, '.dist/dom/history.js')),
 	scroll = require(p.join(appDir, '.dist/dom/scroll.js')),
+	metadata = require(p.join(appDir, '.dist/dom/metadata.js')),
 	sort = require(p.join(appDir, '.dist/dom/sort.mjs')).default;
 
 const diff = require(p.join(appDir, '.dist/diff.mjs')).default;
@@ -506,6 +507,8 @@ async function loadFilesIndexPage(files, file, animation, path, keepScroll, main
 		}, file);
 	}
 
+	dom.metadata.setList(pathFiles);
+
 	if(_indexLabel?.filter)
 	{
 		pathFiles = dom.labels.filterList(pathFiles, _indexLabel.filter);
@@ -759,6 +762,11 @@ async function loadIndexPage(animation = true, path = false, content = false, ke
 			orderKey = 'added';
 			sortInvert = !sortInvert;
 		}
+		else if(/^metadata-/.test(sort))
+		{
+			order = 'metadata';
+			orderKey = sort.replace(/^metadata-/, '');
+		}
 		else // last-reading
 		{
 			order = 'real-numeric';
@@ -997,6 +1005,8 @@ async function loadIndexPage(animation = true, path = false, content = false, ke
 			}
 		}
 
+		dom.metadata.setList(comics);
+
 		if(_indexLabel?.filter)
 		{
 			comics = dom.labels.filterList(comics, _indexLabel.filter);
@@ -1015,7 +1025,14 @@ async function loadIndexPage(animation = true, path = false, content = false, ke
 				comics[i].readingProgress = readingProgress[comics[i].path] || {lastReading: 0};
 			}
 
+			if(order === 'metadata')
+				dom.metadata.applySortValues(comics, orderKey);
+
 			comics.sort(function(a, b) {
+
+				if(order === 'metadata')
+					return dom.metadata.compare(a, b, sortInvert);
+
 				return (sortInvert) ? -(orderBy(a, b, order, orderKey, orderKey2)) : orderBy(a, b, order, orderKey, orderKey2);
 			});
 
@@ -2156,13 +2173,18 @@ function setCurrentPageVars(page, _indexLabel = false)
 
 	const sortAndViewOpds = config.sortAndView.opds || defaultSortAndView;
 
+	const sortValue = sortAndView ? sortAndView.sort : config['sort'+extraKey];
+	const sortIsMetadata = /^metadata-/.test(sortValue);
+
 	handlebarsContext.page = {
 		..._indexLabel,
 		...{
 			key: key,
 			name: labelKey ? labelKey : page,
 			view: sortAndView ? sortAndView.view : config['view'+extraKey],
-			sort: sortAndView ? sortAndView.sort : config['sort'+extraKey],
+			sort: sortValue,
+			sortIsMetadata: sortIsMetadata,
+			sortMetadataName: sortIsMetadata ? dom.metadata.fieldName(sortValue.replace(/^metadata-/, '')) : false,
 			sortInvert: sortAndView ? sortAndView.sortInvert : config['sortInvert'+extraKey],
 			foldersFirst: sortAndView ? true : (config['foldersFirst'+extraKey] || false),
 			compressedFirst: sortAndView ? true : (config['compressedFirst'+extraKey] || false),
@@ -3163,6 +3185,7 @@ module.exports = {
 	header: header,
 	history: history,
 	scroll: scroll,
+	metadata: metadata,
 	sort: sort,
 	this: domManager.this,
 	query: domManager.query,

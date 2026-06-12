@@ -22,6 +22,7 @@
 			"lastOpened": "上次打開",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "資料夾優先",
 			"compressedFirst": "壓縮檔優先",
 			"invert": "反轉排序"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "僅從根資料夾",
-			"requireAllLabels": "需要所有選擇的標籤"
+			"requireAllLabels": "需要所有選擇的標籤",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "復原",

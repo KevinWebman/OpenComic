@@ -22,6 +22,7 @@
 			"lastOpened": "Last opened",
 			"lastModified": "Last modified",
 			"shuffle": "Shuffle",
+			"metadata": "Metadata",
 			"foldersFirst": "Folders first",
 			"compressedFirst": "Compressed first",
 			"invert": "Invert"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "Only from root folders",
-			"requireAllLabels": "Require all select labels"
+			"requireAllLabels": "Require all select labels",
+			"metadata": "Filter by metadata",
+			"metadataEmpty": "No metadata found"
 		},
 		"contextMenu": {
 			"undo": "Undo",

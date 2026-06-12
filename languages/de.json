@@ -22,6 +22,7 @@
 			"lastOpened": "Zuletzt geöffnet",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "Ordner zuerst",
 			"compressedFirst": "",
 			"invert": "Invertieren"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "Nur aus Wurzelordnern",
-			"requireAllLabels": "Alle ausgewählten Labels erfordern"
+			"requireAllLabels": "Alle ausgewählten Labels erfordern",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "Rückgängig machen",

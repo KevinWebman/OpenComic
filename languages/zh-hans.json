@@ -22,6 +22,7 @@
 			"lastOpened": "上次打开",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "文件夹置前",
 			"compressedFirst": "压缩文件置前",
 			"invert": "倒序"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "仅来自根文件夹",
-			"requireAllLabels": "要求所有选择标签"
+			"requireAllLabels": "要求所有选择标签",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "撤消",

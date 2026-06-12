@@ -22,6 +22,7 @@
 			"lastOpened": "Ultimo aperto",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "Prima le cartelle",
 			"compressedFirst": "",
 			"invert": "Inverti"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "",
-			"requireAllLabels": ""
+			"requireAllLabels": "",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "Undo",

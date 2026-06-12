@@ -325,9 +325,11 @@ function filterOnlyRoot()
 	});
 }
 
-function filterList(comics, filter = {favorites: false, labels: false, withoutLabels: false, requireAllLabels: false})
+function filterList(comics, filter = {favorites: false, labels: false, withoutLabels: false, requireAllLabels: false, metadata: false})
 {
-	if(!filter.favorites && !filter.labels && !filter.withoutLabels)
+	const filterMetadata = (filter.metadata && Object.keys(filter.metadata).length) ? filter.metadata : false;
+
+	if(!filter.favorites && !filter.labels && !filter.withoutLabels && !filterMetadata)
 		return comics;
 
 	const favorites = relative.get('favorites');
@@ -363,6 +365,9 @@ function filterList(comics, filter = {favorites: false, labels: false, withoutLa
 				if(some) return false;
 			}
 		}
+
+		if(filterMetadata && !dom.metadata.match(comic.path, filterMetadata))
+			return false;
 
 		return true;
 

@@ -1,0 +1,31 @@
+<div>
+	{{#if sortMetadataFields}}
+		{{#each sortMetadataFields}}
+		<div class="menu-simple-element menu-simple-element-little sort-metadata-{{key}} gamepad-item{{#if active}} s{{/if}}" onclick="dom.changeSort(1, 'metadata-{{key}}', '{{../sortMetadataPage}}')">{{name}}</div>
+		{{/each}}
+	{{else}}
+	{{#if filterMetadataValues}}
+		<div class="menu-simple-element menu-simple-element-little gamepad-item" onclick="dom.metadata.loadFilter();">
+			<i class="material-icon menu-simple-icon-first">arrow_back</i>
+			<span>{{filterMetadataName}}</span>
+		</div>
+		<div class="menu-simple-separator"></div>
+		{{#each filterMetadataValues}}
+		<div class="menu-simple-element menu-simple-element-little menu-metadata-value-{{key}} gamepad-item{{#if active}} s{{/if}}" onclick="dom.metadata.filterValues({{key}});">
+			<i class="material-icon menu-simple-icon-first{{#if active}} fill{{/if}}">{{#if active}}check_box{{else}}check_box_outline_blank{{/if}}</i>
+			<span>{{name}}</span>
+		</div>
+		{{/each}}
+	{{else}}
+		{{#each filterMetadataFields}}
+		<div class="menu-simple-element menu-simple-element-little menu-metadata-field-{{key}} gamepad-item{{#if num}} s{{/if}}" onclick="dom.metadata.loadFilterValues('{{key}}');">
+			<i class="material-icon menu-simple-icon-first{{#if num}} fill{{/if}}">filter_alt</i>
+			<span>{{name}}{{#if num}} ({{num}}){{/if}}</span>
+			<i class="material-icon menu-simple-icon-last">chevron_right</i>
+		</div>
+		{{else}}
+		<div class="menu-simple-text">{{language.global.filter.metadataEmpty}}</div>
+		{{/each}}
+	{{/if}}
+	{{/if}}
+</div>

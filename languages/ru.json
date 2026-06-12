@@ -22,6 +22,7 @@
 			"lastOpened": "Недавно открытые",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "Сначало папки",
 			"compressedFirst": "Сначало сжатые",
 			"invert": "Инвертировать"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "Только из корневых папок",
-			"requireAllLabels": "Требовать все выбранные метки"
+			"requireAllLabels": "Требовать все выбранные метки",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "Отменить",

@@ -22,6 +22,7 @@
 			"lastOpened": "최근 연 순",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "폴더를 먼저 표시",
 			"compressedFirst": "압축 파일을 먼저 표시",
 			"invert": "정렬 순서 반전"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "",
-			"requireAllLabels": ""
+			"requireAllLabels": "",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "실행 취소",

@@ -12,6 +12,7 @@
 				{{else compare page.name '==' 'browsing'}}
 				<div class="menu-simple-element menu-simple-element-little sort-last-modified gamepad-item{{#compare page.sort '==' 'last-modified'}} s{{/compare}}" onclick="dom.changeSort(1, 'last-modified', '{{page.name}}')">{{language.global.sort.lastModified}}</div>
 				<div class="menu-simple-element menu-simple-element-little sort-shuffle gamepad-item{{#compare page.sort '==' 'shuffle'}} s{{/compare}}" onclick="dom.sort.generateShuffle(); dom.changeSort(1, 'shuffle', '{{page.name}}')">{{language.global.sort.shuffle}}</div>
+				<div class="menu-simple-element menu-simple-element-little sort-metadata gamepad-item{{#if page.sortIsMetadata}} s{{/if}}" onclick="(async function(){await events.desactiveMenu('#index-sort'); dom.metadata.loadSortMenu(); events.activeMenu('#index-sort-metadata', '.bar-right-buttons .button-sort', 'right');})()">{{language.global.sort.metadata}}{{#if page.sortMetadataName}} ({{page.sortMetadataName}}){{/if}}<i class="material-icon menu-simple-icon-last">chevron_right</i></div>
 				<div class="menu-simple-text gamepad-item">
 					{{language.global.sort.foldersFirst}}
 					<div class="switch{{#if page.foldersFirst}} a{{/if}}" on="dom.changeSort(3, true, false)" off="dom.changeSort(3, false, false)">
@@ -30,6 +31,7 @@
 				<div class="menu-simple-element menu-simple-element-little sort-last-add gamepad-item{{#compare page.sort '==' 'last-add'}} s{{/compare}}" onclick="dom.changeSort(1, 'last-add', '{{page.name}}')">{{language.global.sort.lastAdd}}</div>
 				<div class="menu-simple-element menu-simple-element-little sort-last-reading gamepad-item{{#compare page.sort '==' 'last-reading'}} s{{/compare}}" onclick="dom.changeSort(1, 'last-reading', '{{page.name}}')">{{language.global.sort.lastReading}}</div>
 				<div class="menu-simple-element menu-simple-element-little sort-shuffle gamepad-item{{#compare page.sort '==' 'shuffle'}} s{{/compare}}" onclick="dom.sort.generateShuffle(); dom.changeSort(1, 'shuffle', '{{page.name}}')">{{language.global.sort.shuffle}}</div>
+				<div class="menu-simple-element menu-simple-element-little sort-metadata gamepad-item{{#if page.sortIsMetadata}} s{{/if}}" onclick="(async function(){await events.desactiveMenu('#index-sort'); dom.metadata.loadSortMenu(); events.activeMenu('#index-sort-metadata', '.bar-right-buttons .button-sort', 'right');})()">{{language.global.sort.metadata}}{{#if page.sortMetadataName}} ({{page.sortMetadataName}}){{/if}}<i class="material-icon menu-simple-icon-last">chevron_right</i></div>
 				{{/compare}}
 				<div class="menu-simple-text gamepad-item">
 					{{language.global.sort.invert}}
@@ -267,6 +269,11 @@
 					{{language.global.labels}}
 				</div>
 
+				<div class="menu-simple-element gamepad-item" onclick="(async function(){await events.desactiveMenu('#index-menu-gamepad'); dom.metadata.loadFilter(); events.activeMenu('#index-filter-metadata', false, 'gamepad', 'gamepad');})()">
+					<i class="material-icon menu-simple-icon-first">filter_alt</i>
+					{{language.global.filter.metadata}}
+				</div>
+
 				<div class="menu-simple-element gamepad-item" onclick="events.desactiveMenu('#index-menu-gamepad'); dom.search.showHide();">
 					<i class="material-icon menu-simple-icon-first">search</i>
 					{{language.global.search}}
@@ -320,6 +327,24 @@
 		</div>
 	</div>
 	<div class="menu-close" onclick="events.desactiveMenu('#index-labels', '.bar-right-buttons .button-labels');"></div>
+</div>
+
+<div class="menu" id="index-filter-metadata">
+	<div class="menu-simple elevation-2" style="width: 320px;">
+		<div class="menu-simple-content">
+
+		</div>
+	</div>
+	<div class="menu-close" onclick="events.desactiveMenu('#index-filter-metadata', '.bar-right-buttons .button-filter-metadata');"></div>
+</div>
+
+<div class="menu" id="index-sort-metadata">
+	<div class="menu-simple elevation-2" style="width: 256px;">
+		<div class="menu-simple-content">
+
+		</div>
+	</div>
+	<div class="menu-close" onclick="events.desactiveMenu('#index-sort-metadata', '.bar-right-buttons .button-sort');"></div>
 </div>
 
 <script type="text/javascript">

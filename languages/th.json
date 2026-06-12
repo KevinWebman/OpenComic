@@ -22,6 +22,7 @@
 			"lastOpened": "เปิดล่าสุด",
 			"lastModified": "",
 			"shuffle": "",
+			"metadata": "",
 			"foldersFirst": "โฟลเดอร์ขึ้นก่อน",
 			"compressedFirst": "",
 			"invert": "กลับกัน"
@@ -38,7 +39,9 @@
 		},
 		"filter": {
 			"onlyRoot": "",
-			"requireAllLabels": ""
+			"requireAllLabels": "",
+			"metadata": "",
+			"metadataEmpty": ""
 		},
 		"contextMenu": {
 			"undo": "ย้อนกลับ",

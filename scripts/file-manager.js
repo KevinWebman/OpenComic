@@ -3716,6 +3716,8 @@ async function sort(files, options = {})
 		order = 'numeric';
 	else if(sort === 'shuffle')
 		order = 'shuffle';
+	else if(/^metadata-/.test(sort))
+		order = 'metadata';
 	else // name-numeric
 		order = 'simple-numeric';
 
@@ -3749,16 +3751,22 @@ async function sort(files, options = {})
 		);
 	}
 
+	if(order === 'metadata')
+		dom.metadata.applySortValues(files, sort.replace(/^metadata-/, ''));
+
 	files.sort(function (a, b) {
 
 		const aFirst = (foldersFirst && a.folder) || (compressedFirst && a.compressed);
 		const bFirst = (foldersFirst && b.folder) || (compressedFirst && b.compressed);
 
 		if(aFirst && !bFirst)
-			return -1; 
+			return -1;
 
 		if(bFirst && !aFirst)
 			return 1;
+
+		if(order === 'metadata')
+			return dom.metadata.compare(a, b, sortInvert);
 
 		return (sortInvert) ? -(dom.orderBy(a, b, order, key)) : dom.orderBy(a, b, order, key);
 	});

@@ -404,6 +404,7 @@
 	overflow-x: hidden;
 	scrollbar-gutter: stable;
 	padding: 8px 0px;
+	max-height: 60vh;
 }
 
 .menu-simple.a .menu-simple-content
